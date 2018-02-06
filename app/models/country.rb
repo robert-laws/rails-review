@@ -1,4 +1,8 @@
 class Country < ApplicationRecord
+  # validations
+  validates :name, presence: true
+  validates :capital, presence: true
+
   # Model scope without parameters, can be interchanged with class methods
   scope :finnish, -> { where("name == ?", "Finland") }
 
