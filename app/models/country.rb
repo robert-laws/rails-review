@@ -27,6 +27,6 @@ class Country < ApplicationRecord
   private
 
   def check_error_message
-    puts "remember to check error message..."
+    # puts "remember to check error message..."
   end
 end
