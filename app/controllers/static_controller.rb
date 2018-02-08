@@ -1,5 +1,9 @@
 class StaticController < ApplicationController
   def about
-    # render 'about_this_site' # using render here will override the implicit view rendering
+    @message = "This is just plain about"
+  end
+
+  def aboutus
+    @message = "This is the longer about us title"
   end
 end
