@@ -2,3 +2,8 @@
 
 <h4>Name: <%= @country.name %></h4>
 <p>Capital: <%= @country.capital %></p>
+<p>EU Member? <%= @country.eu_membership %> -- <%= link_to 'Change EU Membership', change_membership_path %></p>
+
+<hr>
+
+<%= link_to 'View all Countries', countries_path %>

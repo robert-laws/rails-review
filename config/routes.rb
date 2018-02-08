@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/countries/new', to: 'countries#new', as: 'new_country'
 
   get '/countries/:id', to: 'countries#show', as: 'country'
+  get '/countries/:id/change_membership', to: 'countries#change_membership', as: 'change_membership'
+
   # Static Controller & View
   get 'about', to: 'static#about', as: 'about'
   get 'welcome/:name_id', to: 'static#welcome', as: 'welcome'
