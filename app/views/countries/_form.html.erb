@@ -1,17 +1,2 @@
 <h2>Form Partial</h2>
 
-<%= form_tag country_path(@country), method: "put" do %>
-  <label>Name:</label>
-  <%= text_field_tag :name, @country.name %><br>
-
-  <label>Capital:</label>
-  <%= text_field_tag :capital, @country.capital %><br>
-
-  <label>Population:</label>
-  <%= number_field_tag :population, @country.population %><br>
-
-  <label>Foundation Year:</label>
-  <%= number_field_tag :foundation_year, @country.foundation_year %><br>
-
-  <%= submit_tag "Submit Country" %>
-<% end %>

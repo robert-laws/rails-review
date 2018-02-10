@@ -5,6 +5,10 @@ class StaticController < ApplicationController
     @message = "This is just plain about"
   end
 
+  def comment
+    @comment = params[:comment]
+  end
+
   def welcome
     id = params[:name_id]
 

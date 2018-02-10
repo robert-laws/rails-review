@@ -14,8 +14,14 @@ Rails.application.routes.draw do
   get '/countries/:id/change_membership', to: 'countries#change_membership', as: 'change_membership'
 
   # Static Controller & View
-  get 'about', to: 'static#about', as: 'about'
-  get 'welcome/:name_id', to: 'static#welcome', as: 'welcome'
+  get '/about', to: 'static#about', as: 'about'
+  get '/welcome/:name_id', to: 'static#welcome', as: 'welcome'
+
+
+  # Contact Form
+  get '/contact', to: 'static#contact'
+  post '/contact', to: 'static#comment'
+  
 
   root 'countries#index'
 end

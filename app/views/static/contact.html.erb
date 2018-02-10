@@ -1,0 +1,8 @@
+<h1>Contact Form</h1>
+
+<%= form_tag contact_path do %>
+  <label>Comment:</label>
+  <%= text_area_tag :comment %><br>
+
+  <%= submit_tag "Submit Comment" %>
+<% end %>
