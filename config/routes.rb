@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # resources :countries, only: [:index, :show, :new]
 
   get '/countries', to: 'countries#index'
+  post '/countries', to: 'countries#create'
   get '/countries/new', to: 'countries#new', as: 'new_country'
 
   get '/countries/:id', to: 'countries#show', as: 'country'

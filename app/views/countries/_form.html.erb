@@ -1,1 +1,11 @@
 <h2>Form Partial</h2>
+
+<%= form_tag countries_path do %>
+  <label>Name:</label>
+  <%= text_field_tag :name %><br>
+
+  <label>Capital:</label>
+  <%= text_field_tag :capital %><br>
+
+  <%= submit_tag "Submit Country" %>
+<% end %>

@@ -1,3 +1,5 @@
+require 'pry'
+
 class CountriesController < ApplicationController
   def index
     @countries = Country.all
@@ -8,8 +10,19 @@ class CountriesController < ApplicationController
   end
 
   def new
-
+    @country = Country.new
   end
+
+  def create
+    @country = Country.new
+    @country.name = params[:name]
+    @country.capital = params[:capital]
+    @country.save
+
+    redirect_to countries_path
+  end
+
+
 
   def change_membership
     country = Country.find(params[:id])
