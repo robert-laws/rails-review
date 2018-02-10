@@ -30,7 +30,7 @@ class CountriesController < ApplicationController
 
   def update
     @country = Country.find(params[:id])
-    @country.update(params.require(:country).permit(:name, :capital, :population, :foundation_year))
+    @country.update(country_params)
     redirect_to country_path(@country)
   end
   
@@ -44,5 +44,11 @@ class CountriesController < ApplicationController
       country.update(eu_membership: true)
     end
     redirect_to country_path(country)
+  end
+
+  private
+
+  def country_params
+    params.require(:country).permit(:name, :capital, :population, :foundation_year)
   end
 end
