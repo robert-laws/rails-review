@@ -1,4 +1,5 @@
-Country.destroy_all
+Country.delete_all
+City.delete_all
 
 @norway = Country.create(name: "Norway", capital: "Oslo", population: 5233000, foundation_year: 1905)
 @sweden = Country.create(name: "Sweden", capital: "Stockholm", population: 9903000, foundation_year: 1523)

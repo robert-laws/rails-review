@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   # resources :countries, only: [:index, :show, :new]
 
+  resources :cities, only: [:index, :show, :new, :create, :edit, :update]
+
   get '/countries', to: 'countries#index'
   post '/countries', to: 'countries#create'
   
@@ -17,11 +19,9 @@ Rails.application.routes.draw do
   get '/about', to: 'static#about', as: 'about'
   get '/welcome/:name_id', to: 'static#welcome', as: 'welcome'
 
-
   # Contact Form
   get '/contact', to: 'static#contact'
   post '/contact', to: 'static#comment'
   
-
   root 'countries#index'
 end

@@ -1,0 +1,15 @@
+<h1>City Information</h1>
+
+<h4>
+  <%= @city.name %>
+</h4>
+
+<p>
+  Country: <%= @city.country.name %>
+</p>
+
+<p>
+  Population: <%= @city.population %>
+</p>
+
+<%= link_to 'Edit City', edit_city_path(@city) %>
