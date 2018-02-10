@@ -2,18 +2,18 @@
 
 <%#= render 'form' %>
 
-<%= form_tag country_path(@country), method: "put" do %>
+<%= form_for(@country) do |f| %>
   <label>Name:</label>
-  <%= text_field_tag :name, @country.name %><br>
+  <%= f.text_field :name %><br>
 
   <label>Capital:</label>
-  <%= text_field_tag :capital, @country.capital %><br>
+  <%= f.text_field :capital %><br>
 
   <label>Population:</label>
-  <%= number_field_tag :population, @country.population %><br>
+  <%= f.number_field :population %><br>
 
   <label>Foundation Year:</label>
-  <%= number_field_tag :foundation_year, @country.foundation_year %><br>
+  <%= f.number_field :foundation_year %><br>
 
-  <%= submit_tag "Submit Country" %>
+  <%= f.submit %>
 <% end %>

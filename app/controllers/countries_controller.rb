@@ -30,7 +30,7 @@ class CountriesController < ApplicationController
 
   def update
     @country = Country.find(params[:id])
-    @country.update(name: params[:name], capital: params[:capital], population: params[:population], foundation_year: params[:foundation_year])
+    @country.update(params.require(:country).permit(:name, :capital, :population, :foundation_year))
     redirect_to country_path(@country)
   end
   

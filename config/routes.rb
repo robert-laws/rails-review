@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/countries/:id', to: 'countries#show', as: 'country'
   get '/countries/:id/edit', to: 'countries#edit', as: 'edit_country'
-  put '/countries/:id', to: 'countries#update'
+  patch '/countries/:id', to: 'countries#update'
   
   get '/countries/:id/change_membership', to: 'countries#change_membership', as: 'change_membership'
 
