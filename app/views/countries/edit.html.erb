@@ -1,19 +1,5 @@
 <h1>Edit Country Form</h1>
 
-<%#= render 'form' %>
+<%= render 'form' %>
 
-<%= form_for(@country) do |f| %>
-  <label>Name:</label>
-  <%= f.text_field :name %><br>
-
-  <label>Capital:</label>
-  <%= f.text_field :capital %><br>
-
-  <label>Population:</label>
-  <%= f.number_field :population %><br>
-
-  <label>Foundation Year:</label>
-  <%= f.number_field :foundation_year %><br>
-
-  <%= f.submit %>
-<% end %>
+<%= link_to 'Cancel', country_path(@country) %>

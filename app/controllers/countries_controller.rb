@@ -14,11 +14,7 @@ class CountriesController < ApplicationController
   end
 
   def create
-    @country = Country.new
-    @country.name = params[:name]
-    @country.capital = params[:capital]
-    @country.population = params[:population]
-    @country.foundation_year = params[:foundation_year]
+    @country = Country.new(country_params)
     @country.save
 
     redirect_to countries_path

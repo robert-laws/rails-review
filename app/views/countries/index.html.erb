@@ -1,4 +1,4 @@
-<%= link_to 'Welcome Page', welcome_path(1) %> | <%= link_to 'About Us', about_path %>
+<%= link_to 'Welcome Page', welcome_path(1) %> | <%= link_to 'About Us', about_path %> | <%= link_to 'Contact Form', contact_path %>
 
 <h1>All Countries</h1>
 
@@ -7,3 +7,7 @@
     <li><%= link_to country.name, country_path(country) %></li>
   <% end %>
 </ul>
+
+<hr>
+
+<%= link_to 'Add a new country', new_country_path %>
