@@ -13,9 +13,12 @@ class CountriesController < ApplicationController
 
   def create
     @country = Country.new(country_params)
-    @country.save
-
-    redirect_to countries_path
+    
+    if @country.save
+      redirect_to countries_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -28,8 +31,6 @@ class CountriesController < ApplicationController
     redirect_to country_path(@country)
   end
   
-
-
   def change_membership
     country = Country.find(params[:id])
     if country.eu_membership

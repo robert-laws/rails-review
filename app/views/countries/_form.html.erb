@@ -1,5 +1,21 @@
 <h2>Form Partial</h2>
 
+<% if @country.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@country.errors.count, "error") %>
+      prevented this country from being saved:
+    </h2>
+    <ul>
+      <% @country.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for(@country) do |f| %>
   <label>Name:</label>
   <%= f.text_field :name %><br>
