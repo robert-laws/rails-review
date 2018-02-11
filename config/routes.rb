@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   # resources :countries, only: [:index, :show, :new]
 
-  resources :cities, only: [:index, :show, :new, :create, :edit, :update]
+  resources :cities, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
   get '/countries', to: 'countries#index'
   post '/countries', to: 'countries#create'

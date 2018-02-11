@@ -31,6 +31,11 @@ class CitiesController < ApplicationController
     redirect_to city_path(@city)
   end
 
+  def destroy
+    City.find(params[:id]).destroy
+    redirect_to cities_path
+  end
+
   private
 
   def city_params
