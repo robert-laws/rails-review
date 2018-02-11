@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207060714) do
+ActiveRecord::Schema.define(version: 20180211175311) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180207060714) do
     t.integer "population"
     t.integer "foundation_year"
     t.boolean "eu_membership", default: true, null: false
+    t.integer "membership_year"
   end
 
 end

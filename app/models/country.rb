@@ -5,6 +5,7 @@ class Country < ApplicationRecord
   # validations
   validates :name, presence: true
   validates :capital, presence: true
+  validates :membership_year, numericality: true
 
   # custom scope without parameters, can be interchanged with class methods
   scope :finnish, -> { where("name == ?", "Finland") }

@@ -18,7 +18,7 @@ class CitiesController < ApplicationController
       redirect_to city_path(@city)
     else
       render :new
-    end    
+    end
   end
 
   def edit
@@ -27,8 +27,11 @@ class CitiesController < ApplicationController
 
   def update
     @city = City.find(params[:id])
-    @city.update(city_params)
-    redirect_to city_path(@city)
+    if @city.update(city_params)
+      redirect_to city_path(@city)
+    else
+      render :edit
+    end
   end
 
   def destroy
