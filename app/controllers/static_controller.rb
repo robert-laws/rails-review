@@ -1,5 +1,3 @@
-require 'pry'
-
 class StaticController < ApplicationController
   def about
     @message = "This is just plain about"

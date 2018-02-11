@@ -1,3 +1,19 @@
+<% if @city.errors.any? %>
+  <div id="error_explaination">
+    <h2>
+      <%= pluralize(@city.errors.count, "error") %>
+      prevented this city from being saved:
+    </h2>
+    <ul>
+      <% @city.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for(@city) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %><br>

@@ -13,8 +13,12 @@ class CitiesController < ApplicationController
 
   def create
     @city = City.new(city_params)
-    @city.save
-    redirect_to city_path(@city)
+
+    if @city.save
+      redirect_to city_path(@city)
+    else
+      render :new
+    end    
   end
 
   def edit
