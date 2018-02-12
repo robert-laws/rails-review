@@ -2,9 +2,9 @@ Country.delete_all
 City.delete_all
 
 @norway = Country.create(name: "Norway", capital: "Oslo", population: 5233000, foundation_year: 1905)
-@sweden = Country.create(name: "Sweden", capital: "Stockholm", population: 9903000, foundation_year: 1523)
-@denmark = Country.create(name: "Denmark", capital: "Copenhagen", population: 5731000, foundation_year: 1814)
-@finland = Country.create(name: "Finland", capital: "Helsinki", population: 5495000, foundation_year: 1917)
+@sweden = Country.create(name: "Sweden", capital: "Stockholm", population: 9903000, foundation_year: 1523, membership_year: 1954)
+@denmark = Country.create(name: "Denmark", capital: "Copenhagen", population: 5731000, foundation_year: 1814, membership_year: 1954)
+@finland = Country.create(name: "Finland", capital: "Helsinki", population: 5495000, foundation_year: 1917, membership_year: 1965)
 
 City.create(name: "Oslo", population: 755000, country: @norway)
 City.create(name: "Bergen", population: 264000, country: @norway)
