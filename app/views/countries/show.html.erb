@@ -5,6 +5,16 @@
 <p>Capital: <%= @country.capital %></p>
 <p>EU Member? <%= @country.eu_membership %> -- <%= link_to 'Change EU Membership', change_membership_path %></p>
 
+<h4>Country Diplomats</h4>
+
+<ul>
+  <% @country.diplomats.each do |diplomat| %>
+    <li>
+      <%= diplomat.name %>
+    </li>
+  <% end %>
+</ul>
+
 <h4>Country Cities</h4>
 
 <ul>

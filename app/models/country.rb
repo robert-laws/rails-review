@@ -1,6 +1,8 @@
 class Country < ApplicationRecord
   # relationships
-  has_many :cities
+  has_many :cities, dependent: :destroy
+  has_many :diplomats, dependent: :destroy
+  accepts_nested_attributes_for :diplomats
 
   # validations
   validates :name, presence: true
