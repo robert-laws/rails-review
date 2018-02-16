@@ -5,12 +5,10 @@
 <% end %>
 
 <h4>
-  <%= @city.name %>
+  City Name: <%= @city.name %>
 </h4>
 
-<p>
-  Country: <%= @city.country.name %>
-</p>
+<%= render partial: 'countries/basic_info', locals: { country: @city.country } %>
 
 <p>
   Population: <%= @city.population %>

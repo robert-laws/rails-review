@@ -3,8 +3,8 @@
 <h1>Country Infomration</h1>
 <%= link_to 'Edit Country', edit_country_path(@country) %>
 
-<h4>Name: <%= @country.name %></h4>
-<p>Capital: <%= @country.capital %></p>
+<%= render partial: 'basic_info', locals: { country: @country } %>
+
 <p>EU Member? <%= @country.eu_membership %> -- <%= link_to 'Change EU Membership', change_membership_path %></p>
 
 <h4>Country Diplomats</h4>
