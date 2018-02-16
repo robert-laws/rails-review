@@ -1,6 +1,6 @@
 <% provide(:title, "The Countries Section") %>
 
-<%= link_to 'Welcome Page', welcome_path(1) %> | <%= link_to 'About Us', about_path %> | <%= link_to 'Contact Form', contact_path %>
+<%= render partial: 'shared/menu', layout: 'shared/main_menu' %>
 
 <h1>All Countries</h1>
 
@@ -13,3 +13,5 @@
 <hr>
 
 <%= link_to 'Add a new country', new_country_path %>
+
+<%= render 'shared/footer' %>
