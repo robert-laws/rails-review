@@ -1,5 +1,9 @@
 <h1>City Information</h1>
 
+<% flash.each do |name, message| %>
+  <%= content_tag :div, message %>
+<% end %>
+
 <h4>
   <%= @city.name %>
 </h4>

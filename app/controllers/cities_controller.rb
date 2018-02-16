@@ -16,7 +16,7 @@ class CitiesController < ApplicationController
     @city = City.new(city_params)
 
     if @city.save
-      redirect_to city_path(@city)
+      redirect_to city_path(@city), notice: "You have successfully created a new city"
     else
       render :new
     end
@@ -29,6 +29,7 @@ class CitiesController < ApplicationController
   def update
     @city = City.find(params[:id])
     if @city.update(city_params)
+      flash[:notice] = "You have successfully updated #{@city.name}."
       redirect_to city_path(@city)
     else
       render :edit
