@@ -7,6 +7,8 @@
 <ul>
   <% @countries.each do |country| %>
     <li><%= link_to country.name, country_path(country) %></li>
+    <%= render partial: 'membership_info', locals: { country: country }%>
+    <%= render partial: 'cities/city', collection: country.cities %>
   <% end %>
 </ul>
 

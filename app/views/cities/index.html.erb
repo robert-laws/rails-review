@@ -8,6 +8,8 @@
   <% end %>
 </ul>
 
+<%= render @cities || "There are no cities" %>
+
 <hr>
 
 <%= link_to 'Create a new City', new_city_path %>
