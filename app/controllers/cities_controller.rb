@@ -9,6 +9,7 @@ class CitiesController < ApplicationController
 
   def new
     @city = City.new
+    render layout: 'new_city'
   end
 
   def create
