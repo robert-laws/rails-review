@@ -12,6 +12,10 @@
   Population: <%= @city.population %>
 </p>
 
+<p>
+  Capital City: <%= @city.capital_city %>
+</p>
+
 <%= link_to 'Edit City', edit_city_path(@city) %><br>
 
 <%= link_to 'Delete City', @city, method: :delete, data: { confirm: "Are you sure?" } %>
